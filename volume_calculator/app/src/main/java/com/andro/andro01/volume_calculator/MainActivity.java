@@ -2,10 +2,12 @@ package com.andro.andro01.volume_calculator;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.GridView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 
@@ -39,6 +41,17 @@ public class MainActivity extends AppCompatActivity {
         gridView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                if (adapter.getItem(position) == cube) {
+                    Toast.makeText(getApplicationContext(),
+                            "Name: " + adapter.getItem(position).getShapeName(),
+                            Toast.LENGTH_SHORT).show();
+                    Intent intent = new Intent(getApplicationContext(), CubeCalculator.class);
+                    startActivity(intent);
+                } else {
+                    Toast.makeText(getApplicationContext(),
+                            "NaNaNa",
+                            Toast.LENGTH_SHORT).show();
+                }
 
             }
         });

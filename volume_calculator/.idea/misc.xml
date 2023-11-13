@@ -3,9 +3,9 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Programming/android_learning/volume_calculator2/app/src/main/res/layout/activity_cube_calculate.xml" value="0.25416666666666665" />
-        <entry key="..\:/Programming/android_learning/volume_calculator2/app/src/main/res/layout/activity_main.xml" value="0.23645833333333333" />
-        <entry key="..\:/Programming/android_learning/volume_calculator2/app/src/main/res/layout/grid_item_layout.xml" value="0.24947916666666667" />
+        <entry key="..\:/Programming/android_learning/volume_calculator/app/src/main/res/layout/activity_cube_calculator.xml" value="0.25416666666666665" />
+        <entry key="..\:/Programming/android_learning/volume_calculator/app/src/main/res/layout/activity_main.xml" value="0.1" />
+        <entry key="..\:/Programming/android_learning/volume_calculator/app/src/main/res/layout/grid_item_layout.xml" value="0.25416666666666665" />
       </map>
     </option>
   </component>
