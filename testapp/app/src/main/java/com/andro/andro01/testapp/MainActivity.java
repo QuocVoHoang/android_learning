@@ -30,6 +30,18 @@ public class MainActivity extends AppCompatActivity {
         personArrayList.add(new Person("quoc1", 23));
         personArrayList.add(new Person("quoc2", 24));
         personArrayList.add(new Person("quoc3", 25));
+        personArrayList.add(new Person("quoc", 22));
+        personArrayList.add(new Person("quoc1", 23));
+        personArrayList.add(new Person("quoc2", 24));
+        personArrayList.add(new Person("quoc3", 25));
+        personArrayList.add(new Person("quoc", 22));
+        personArrayList.add(new Person("quoc1", 23));
+        personArrayList.add(new Person("quoc2", 24));
+        personArrayList.add(new Person("quoc3", 25));
+        personArrayList.add(new Person("quoc", 22));
+        personArrayList.add(new Person("quoc1", 23));
+        personArrayList.add(new Person("quoc2", 24));
+        personArrayList.add(new Person("quoc3", 25));
 
         personAdapter = new PersonAdapter(getApplicationContext(), personArrayList);
         listView.setAdapter(personAdapter);
