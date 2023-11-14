@@ -3,41 +3,45 @@ package com.andro.andro01.testapp;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ListView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
+import java.util.ArrayList;
+
 public class MainActivity extends AppCompatActivity {
+    ListView listView;
+    ArrayList<Person> personArrayList;
+    PersonAdapter personAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        Toolbar myToolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(myToolbar);
+        listView = findViewById(R.id.listView);
+        personArrayList = new ArrayList<>();
+        personArrayList.add(new Person("quoc", 22));
+        personArrayList.add(new Person("quoc1", 23));
+        personArrayList.add(new Person("quoc2", 24));
+        personArrayList.add(new Person("quoc3", 25));
 
-    }
+        personAdapter = new PersonAdapter(getApplicationContext(), personArrayList);
+        listView.setAdapter(personAdapter);
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-
-        getMenuInflater().inflate(R.menu.menu_main, menu);
-        return true;
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
-        int itemId = item.getItemId();
-        if(itemId == R.id.action_settings){
-            Toast.makeText(this, "Setting", Toast.LENGTH_SHORT).show();
-        }
-        if(itemId == R.id.action_search){
-            Toast.makeText(this, "Search", Toast.LENGTH_SHORT).show();
-        }
-
-        return super.onOptionsItemSelected(item);
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                Person person = (Person) personAdapter.getItem(position);
+                Toast.makeText(getApplicationContext(),
+                        "Name: " + person.getName(),
+                        Toast.LENGTH_SHORT).show();
+            }
+        });
     }
 }
