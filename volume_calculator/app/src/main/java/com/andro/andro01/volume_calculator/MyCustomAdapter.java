@@ -19,7 +19,6 @@ public class MyCustomAdapter extends ArrayAdapter<Shape> {
 
     public MyCustomAdapter(ArrayList<Shape> shapesArrayList, Context context) {
         super(context, R.layout.grid_item_layout, shapesArrayList);
-//        super(context, R.layout.grid_item_layout);
         this.shapesArrayList = shapesArrayList;
         this.context = context;
     }

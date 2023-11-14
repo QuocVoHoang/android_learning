@@ -41,16 +41,18 @@ public class MainActivity extends AppCompatActivity {
         gridView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                if (adapter.getItem(position) == cube) {
-                    Toast.makeText(getApplicationContext(),
-                            "Name: " + adapter.getItem(position).getShapeName(),
-                            Toast.LENGTH_SHORT).show();
+                Shape item = adapter.getItem(position);
+                Toast.makeText(getApplicationContext(),
+                        "Name: " + item.getShapeName(),
+                        Toast.LENGTH_SHORT).show();
+
+                if (item == cube) {
                     Intent intent = new Intent(getApplicationContext(), CubeCalculator.class);
                     startActivity(intent);
-                } else {
-                    Toast.makeText(getApplicationContext(),
-                            "NaNaNa",
-                            Toast.LENGTH_SHORT).show();
+                }
+                if (item == cylinder) {
+                    Intent intent = new Intent(getApplicationContext(), CylinderCalculator.class);
+                    startActivity(intent);
                 }
 
             }
