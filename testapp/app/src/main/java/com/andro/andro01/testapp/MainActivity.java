@@ -26,7 +26,7 @@ public class MainActivity extends AppCompatActivity {
 
         listView = findViewById(R.id.listView);
         personArrayList = new ArrayList<>();
-        personArrayList.add(new Person("quoc", 22));
+        personArrayList.add(new Person("quoc000000", 22));
         personArrayList.add(new Person("quoc1", 23));
         personArrayList.add(new Person("quoc2", 24));
         personArrayList.add(new Person("quoc3", 25));
@@ -51,7 +51,7 @@ public class MainActivity extends AppCompatActivity {
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 Person person = (Person) personAdapter.getItem(position);
                 Toast.makeText(getApplicationContext(),
-                        "Name: " + person.getName(),
+                        person.getName() + " : " + person.getAge(),
                         Toast.LENGTH_SHORT).show();
             }
         });
