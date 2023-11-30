@@ -90,7 +90,5 @@ public class MainActivity extends AppCompatActivity {
         // notify an adapter associated with a RecyclerView
         // that the underlying dataset hase changed
         movieAdapter.notifyDataSetChanged();
-
-
     }
 }
